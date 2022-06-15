@@ -10,9 +10,9 @@ To use this API, first add maven dependency to your `pom.xml`.
 
 ```xml
 <dependency>
-    <groupId>eu.domei.uhc</groupId>
-    <artifactId>uhc-api-local</artifactId>
-    <version>2.0-RELEASE</version>
+    <groupId>fr.maygo</groupId>
+    <artifactId>cite-infini-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <scope>provided</scope>
 </dependency>
 ```
