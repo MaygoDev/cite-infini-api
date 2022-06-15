@@ -1,6 +1,6 @@
-# API Java Cité de l'infinie
+# API Java Cité de l'infini
 
-Java API of [Cité de l'infinie](https://citedelinfini.fr), can only get teams data.
+Java API of [Cité de l'infini](https://citedelinfini.fr), can only get teams data.
 
 Currently maintained by [@MaygoDev](https://www.github.com/MaygoDev).
 
@@ -20,13 +20,13 @@ To use this API, first add maven dependency to your `pom.xml`.
 
 ```java
 public static void main(String[] args) {
-    final CiteInfinieClient citeInfinieClient = CiteInfinieClient.newClient();
+    final CiteInfiniClient citeInfiniClient = CiteInfiniClient.newClient();
     
     //Getting first team page
-    citeInfinieClient.getTeamsInPage(1).thenAccept(citeInfinieTeams -> { //Executed after retrieved first page
-        System.out.println("found "+citeInfinieTeams.size()+" teams!");
-        for (CiteInfinieTeam citeInfinieTeam : citeInfinieTeams) {
-            System.out.println(citeInfinieTeam.getName()+"/"+citeInfinieTeam.getTag()+" has "+citeInfinieTeam.getMembers().size()+" members.");
+    citeInfiniClient.getTeamsInPage(1).thenAccept(citeInfiniTeams -> { //Executed after retrieved first page
+        System.out.println("found "+citeInfiniTeams.size()+" teams!");
+        for (CiteInfiniTeam citeInfiniTeam : citeInfiniTeams) {
+            System.out.println(citeInfiniTeam.getName()+"/"+citeInfiniTeam.getTag()+" has "+citeInfiniTeam.getMembers().size()+" members.");
         }
     }).exceptionally(throwable -> { //Error while getting first page
         throwable.printStackTrace();

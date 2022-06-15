@@ -5,16 +5,16 @@ import com.google.gson.JsonObject;
 import lombok.Data;
 
 @Data
-public class CiteInfinieSimpleUser {
+public class CiteInfiniSimpleUser {
 
     private final int id;
     private final String minecraftUniqueId, minecraftUsername,
             discordId, discordUsername, discordAvatar;
 
-    public static CiteInfinieSimpleUser from(JsonObject userObj) {
+    public static CiteInfiniSimpleUser from(JsonObject userObj) {
         if (userObj == null) return null;
         final JsonElement discordAvatar = userObj.get("discord_avatar");
-        return new CiteInfinieSimpleUser(userObj.get("id").getAsInt(),
+        return new CiteInfiniSimpleUser(userObj.get("id").getAsInt(),
                 userObj.get("minecraft_uuid").getAsString(),
                 userObj.get("minecraft_username").getAsString(),
                 userObj.get("discord_id").getAsString(),
